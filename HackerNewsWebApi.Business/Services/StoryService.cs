@@ -50,6 +50,7 @@ namespace HackerNewsWebApi.Business.Services
 
         public async Task<HttpResponseMessage> GetStoryByIdAsync(int id)
         {
+
             var cachedResponse = await _cache.GetOrCreateAsync(id,
                async cacheEntry =>
                {
